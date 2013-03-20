@@ -1,0 +1,6 @@
+name: calendar_constants
+version: 0.0.1
+author: Sean Eagan <seaneagan1@gmail.com>
+description: An attempted improvement on how to expose weekday and month constants in Dart
+homepage: http://www.github.com/seaneagan/dart-calendar-constants
+dependencies:
