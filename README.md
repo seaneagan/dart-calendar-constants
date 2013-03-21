@@ -1,19 +1,25 @@
 dart-calendar-constants
 =======================
 
-This is an attempt to improve on how weekday and month constants are exposed in Dart.
+Dart currently exposes weekday and month constants as 3-letter abbreviated static constants in [DateTime].  This is bad because:
 
-They are currently exposed as static constants in DateTime.  This is bad because:
-
-* weekday and month constants are mixed together
-* they use ugly/unreadable 3 letter abbreviations
 * you always have to prefix them with "DateTime."
-* they could be used by other classes than DateTime
+* abbreviations are unreadable (especially for non-native english speakers?)
+* not really specific to DateTime, so misplaced
+* weekday and month constants are mixed together
 
-My proposal is to:
+This pub package is a proposal to:
 
+* move each set of constants ([months](lib/month.dart) and [weekdays](lib/weekday.dart)) to its own library
 * unabbreviate the constants
-* expose each set of constants to its own library in a pub package
-* link to those libraries in the documentation for DateTime.weekday and DateTime.month
+* link to those libraries in the documentation for [DateTime.weekday] and [DateTime.month]
 
-If you like this proposal star http://dartbug.com/xxx
+You can compare the [old way](example/old_way.dart) and [new way](example/new_way.dart).
+
+If you agree, then star [this issue](http://dartbug.com/xxx).
+
+Presumably these libraries would move to a more broad ranging calendar package in the future.
+
+[DateTime]: http://api.dartlang.org/docs/bleeding_edge/dart_core/DateTime.html
+[DateTime.weekday]: http://api.dartlang.org/docs/bleeding_edge/dart_core/DateTime.html#weekday
+[DateTime.month]: http://api.dartlang.org/docs/bleeding_edge/dart_core/DateTime.html#month
