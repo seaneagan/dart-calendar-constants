@@ -16,7 +16,7 @@ This pub package is a proposal to:
 
 You can compare the [old way](example/old_way.dart) and [new way](example/new_way.dart).
 
-If you agree, then star [this issue](http://dartbug.com/xxx).
+If you agree, then star [this issue](http://dartbug.com/9346).
 
 Presumably these libraries would move to a more broad ranging calendar package in the future.
 
